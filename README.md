@@ -33,7 +33,7 @@ Tuberculosis (TB) remains a major health concern, especially in low-resource and
 
 
 ## Related Work
-Current approaches for Tuberculosis detection on the TBK11X datast predominantly rely on computationally intensive architectures. For instance, original creators of this dataset has introduced SymFormer, which is a Transformer-based architecture that leverages Symmetric Search Attention and Symmetric Positional Encoding to utilize the symmetry of chest X-Rays [1]. While other studies use complex pipeline by merging multiple heavy classifiers like SqueezeNet, ChexNet, and EfficientNet [2]. Furthermore, recent single-stage attempts like SFF-YOLOv8 rely on intricate multi-scale fusion blocks that increase model overhead [3]. This study addresses these gaps by introducing a streamlined, single-stage YOLOv8s-CBAM architecture. This model will utilize an integrated Channel and Spatial Attention to learn the intrinsic local visual signatures of Latent and Active TB lesions independent of lung symmetry.
+Current approaches for Tuberculosis detection on the TBK11X datast predominantly rely on computationally intensive architectures. For instance, original creators of this dataset has introduced SymFormer, which is a Transformer-based architecture that leverages Symmetric Search Attention and Symmetric Positional Encoding to utilize the symmetry of chest X-Rays [1]. While other studies use complex pipeline by merging multiple heavy classifiers like SqueezeNet, ChexNet, and EfficientNet [2]. Furthermore, recent single-stage attempts like SFF-YOLOv8 rely on intricate multi-scale fusion blocks that increase model overhead [3]. This project addresses these gaps by introducing a streamlined, single-stage YOLOv8s-CBAM architecture. This model will utilize an integrated Channel and Spatial Attention to learn the intrinsic local visual signatures of Latent and Active TB lesions independent of lung symmetry.
 
 - [Detection from Chest X‐Ray Images Based on Modified Deep Learning Approach. (n.d.). https://ieeexplore.ieee.org/document/10496335 [1]]
 - [Liu, Y., Wu, Y., Zhang, S., Liu, L., Wu, M., & Cheng, M. (2023). Revisiting Computer-Aided Tuberculosis diagnosis. IEEE Transactions on Pattern Analysis and Machine Intelligence, 46(4),[2]]
@@ -93,8 +93,8 @@ Inside the notebooks
 > * **Reference Study "All" Score:** The reference study included "Healthy" and "Sick (Non-TB)" classes which are easier to detect. Their high "All" mAP (0.657) is inflated by these classes (e.g., Healthy mAP was 0.995). Direct comparison should focus on the **Active** and **Latent** rows.
 
 ### Demo
-![Detection Demo](demo/detection.gif)
-[Video: [CSC173_YourLastName_Final.mp4](demo/CSC173_YourLastName_Final.mp4)] [web:41]
+![Detection Demo](demo/sample_detection.png)
+[Video: [CSC173_Abuel_Final.mp4](demo/CSC173_Abuel_Final.mp4)] [web:41]
 
 ## Discussion
 - Strengths: The integration of the Convolutional Block Attention Module (CBAM) into the YOLOv8 backbone significantly enhanced feature extraction for subtle pathologies. Most notably, the model achieved a mAP@50 of 0.180 for Latent Tuberculosis, outperforming the complex SFF-YOLOv8 architecture (0.107 mAP) cited in recent literature. Additionally, the model demonstrated high sensitivity with a Recall of 0.665 for Active TB, ensuring fewer infectious cases are missed during screening.
